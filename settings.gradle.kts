@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "1000 Thoughts"
 include(":app")
- 
+include("project-without-directory")
+project(":project-without-directory").projectDir.mkdirs()
