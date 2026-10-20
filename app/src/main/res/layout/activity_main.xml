@@ -1,19 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+                app:title="1000 Thoughts" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView android:id="@+id/countText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp" android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <EditText android:id="@+id/searchInput"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_margin="16dp" android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_search" android:drawablePadding="10dp"
+            android:paddingHorizontal="14dp"
+            android:hint="Search tags" android:inputType="text" android:maxLines="1"
+            android:imeOptions="actionDone" android:importantForAutofill="no" />
+
+        <HorizontalScrollView android:id="@+id/tagScroll"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:paddingHorizontal="16dp" android:visibility="gone">
+            <com.google.android.material.chip.ChipGroup android:id="@+id/tagChips"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:singleLine="true" />
+        </HorizontalScrollView>
+
+        <TextView android:id="@+id/emptyMessage"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="24dp" android:gravity="center" android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:layout_marginTop="8dp"
+            android:clipToPadding="false" android:paddingBottom="88dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:text="Add photos" app:icon="@drawable/ic_add" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

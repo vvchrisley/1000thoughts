@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">1000 Thoughts</string>
+    <string name="manage_tags">Manage tags</string>
 </resources>

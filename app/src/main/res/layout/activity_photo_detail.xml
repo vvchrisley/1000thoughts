@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView android:id="@+id/photo"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:scaleType="fitCenter"
+        android:contentDescription="Selected photo" />
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tags" android:textStyle="bold" />
+
+        <TextView android:id="@+id/noTags"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="No tags yet. Add one below." />
+
+        <com.google.android.material.chip.ChipGroup android:id="@+id/tagGroup"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <AutoCompleteTextView android:id="@+id/tagInput"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input" android:paddingHorizontal="14dp"
+                android:hint="Add a tag" android:inputType="text" android:maxLines="1"
+                android:maxLength="30" android:imeOptions="actionDone"
+                android:importantForAutofill="no" />
+
+            <Button android:id="@+id/addTagButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:text="Add" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

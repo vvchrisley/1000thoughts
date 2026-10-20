@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._1000Thoughts">
         <activity
+            android:name=".PhotoDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
