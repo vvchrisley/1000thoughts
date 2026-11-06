@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -14,6 +15,9 @@ public interface TagDao {
 
     @Insert
     long insertTag(Tag tag);
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    long insertTagIfAbsent(Tag tag);
 
     @Update
     void updateTag(Tag tag);
@@ -26,4 +30,7 @@ public interface TagDao {
 
     @Query("SELECT * FROM tags WHERE id = :id LIMIT 1")
     LiveData<Tag> getTagById(long id);
+
+    @Query("SELECT id FROM tags WHERE name = :name LIMIT 1")
+    Long findTagIdByName(String name);
 }

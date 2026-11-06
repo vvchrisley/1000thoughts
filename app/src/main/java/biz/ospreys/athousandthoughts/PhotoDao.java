@@ -13,7 +13,7 @@ import java.util.List;
 @Dao
 public interface PhotoDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertPhoto(Photo photo);
 
     @Update
