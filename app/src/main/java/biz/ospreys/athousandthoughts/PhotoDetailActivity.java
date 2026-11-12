@@ -48,6 +48,10 @@ public class PhotoDetailActivity extends AppCompatActivity {
         tagInput.setOnItemClickListener((p, v, pos, id) -> addTagFromInput());
         tagInput.setOnEditorActionListener((v, actionId, e) -> { addTagFromInput(); return true; });
         findViewById(R.id.addTagButton).setOnClickListener(v -> addTagFromInput());
+        findViewById(R.id.doneButton).setOnClickListener(v -> {
+            addTagFromInput();
+            finish();
+        });
 
         renderTags();
     }
