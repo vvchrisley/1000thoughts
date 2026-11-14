@@ -1,6 +1,8 @@
 package biz.ospreys.athousandthoughts;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button imageTestButton = findViewById(R.id.image_test_button);
+        imageTestButton.setOnClickListener(view ->
+                startActivity(new Intent(this, ImageTestActivity.class))
+        );
+
+        Button tagTestButton = findViewById(R.id.tag_test_button);
+        tagTestButton.setOnClickListener(view ->
+                startActivity(new Intent(this, TagTestActivity.class))
+        );
     }
 }

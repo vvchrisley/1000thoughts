@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._1000Thoughts">
         <activity
+            android:name=".ImageTestActivity"
+            android:exported="false"
+            android:label="@string/image_test_activity_name" />
+        <activity
+            android:name=".TagTestActivity"
+            android:exported="false"
+            android:label="@string/tag_test_activity_name" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
