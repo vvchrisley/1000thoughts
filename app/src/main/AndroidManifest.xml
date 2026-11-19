@@ -12,23 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._1000Thoughts">
         <activity
-            android:name=".ImageTestActivity"
+            android:name=".PhotoDetailActivity"
             android:exported="false"
-            android:label="@string/image_test_activity_name" />
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".TagEditorActivity"
             android:exported="false"
             android:label="@string/tag_editor_activity_name" />
         <activity
-            android:name=".TagTestActivity"
-            android:exported="false"
-            android:label="@string/tag_test_activity_name" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

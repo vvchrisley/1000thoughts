@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">1000 Thoughts</string>
+    <string name="manage_tags">Manage tags</string>
+    <string name="selected_photo">Selected photo</string>
+    <string name="tags">Tags</string>
+    <string name="no_tags_yet_add_one_below">No tags yet. Add one below.</string>
+    <string name="add_a_tag">Add a tag</string>
+    <string name="add">Add</string>
+    <string name="done">Done</string>
     <string name="image_test_activity_name">Image Test</string>
     <string name="tag_test_activity_name">Tag Test</string>
     <string name="tag_editor_activity_name">Tag Editor</string>
@@ -10,7 +17,6 @@
     <string name="pick_photo">Choose photo</string>
     <string name="photo_picker_prompt">Choose a photo to preview and save its URI.</string>
     <string name="opening_photo_picker">Opening photo picker…</string>
-    <string name="selected_photo">Selected photo preview</string>
     <string name="photo_permission_error">Could not keep access to this photo, so its URI was not saved.</string>
     <string name="saving_photo">Saving photo URI…</string>
     <string name="photo_saved">Photo URI saved to the database.</string>
