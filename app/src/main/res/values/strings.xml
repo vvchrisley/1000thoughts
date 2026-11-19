@@ -17,7 +17,6 @@
     <string name="pick_photo">Choose photo</string>
     <string name="photo_picker_prompt">Choose a photo to preview and save its URI.</string>
     <string name="opening_photo_picker">Opening photo picker…</string>
-    <string name="selected_photo">Selected photo preview</string>
     <string name="photo_permission_error">Could not keep access to this photo, so its URI was not saved.</string>
     <string name="saving_photo">Saving photo URI…</string>
     <string name="photo_saved">Photo URI saved to the database.</string>
