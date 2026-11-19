@@ -78,6 +78,22 @@ public class MainActivity extends AppCompatActivity {
                 rebuildChips();
             }
         });
+
+        Button imageTestButton = findViewById(R.id.image_test_button);
+        imageTestButton.setOnClickListener(view ->
+                startActivity(new Intent(this, ImageTestActivity.class))
+        );
+
+        Button tagTestButton = findViewById(R.id.tag_test_button);
+        tagTestButton.setOnClickListener(view ->
+                startActivity(new Intent(this, TagTestActivity.class))
+        );
+
+        Button editTagsButton = findViewById(R.id.editTagsButton);
+        editTagsButton.setOnClickListener(view ->
+                startActivity(new Intent(this, TagEditorActivity.class))
+        );
+
     }
 
     @Override
