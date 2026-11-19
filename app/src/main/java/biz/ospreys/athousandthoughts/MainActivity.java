@@ -32,5 +32,11 @@ public class MainActivity extends AppCompatActivity {
         tagTestButton.setOnClickListener(view ->
                 startActivity(new Intent(this, TagTestActivity.class))
         );
+
+        Button editTagsButton = findViewById(R.id.editTagsButton);
+        editTagsButton.setOnClickListener(view ->
+                startActivity(new Intent(this, TagEditorActivity.class))
+        );
+
     }
 }

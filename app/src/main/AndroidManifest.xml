@@ -16,6 +16,10 @@
             android:exported="false"
             android:label="@string/image_test_activity_name" />
         <activity
+            android:name=".TagEditorActivity"
+            android:exported="false"
+            android:label="@string/tag_editor_activity_name" />
+        <activity
             android:name=".TagTestActivity"
             android:exported="false"
             android:label="@string/tag_test_activity_name" />

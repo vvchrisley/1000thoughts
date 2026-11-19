@@ -2,8 +2,10 @@
     <string name="app_name">1000 Thoughts</string>
     <string name="image_test_activity_name">Image Test</string>
     <string name="tag_test_activity_name">Tag Test</string>
+    <string name="tag_editor_activity_name">Tag Editor</string>
     <string name="open_image_test">Add image to database</string>
     <string name="open_tag_test">Assign tag to image</string>
+    <string name="dup_tag">Tag already exists</string>
     <string name="back">Back</string>
     <string name="pick_photo">Choose photo</string>
     <string name="photo_picker_prompt">Choose a photo to preview and save its URI.</string>
@@ -14,6 +16,7 @@
     <string name="photo_saved">Photo URI saved to the database.</string>
     <string name="select_photo_to_tag">Select a photo to tag</string>
     <string name="tag_name_hint">Enter a tag name</string>
+    <string name="tag_change_name_hint">Enter a tag name to change to</string>
     <string name="add_tag">Add tag</string>
     <string name="current_tags">Tags for selected photo</string>
     <string name="no_tags_yet">No tags assigned yet.</string>
@@ -22,4 +25,8 @@
     <string name="tag_name_required">Enter a tag name.</string>
     <string name="tag_added">Tag assigned to photo.</string>
     <string name="tag_save_failed">Could not save tag: %1$s</string>
+    <string name="tag_change_to">Change tag</string>
+    <string name="edit_tag_text">Tag Name:</string>
+    <string name="tag_remove">Remove tag</string>
+    <string name="tag_edit">Tag editor</string>
 </resources>

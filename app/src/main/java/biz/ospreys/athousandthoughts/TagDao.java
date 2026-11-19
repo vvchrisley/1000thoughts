@@ -33,4 +33,7 @@ public interface TagDao {
 
     @Query("SELECT id FROM tags WHERE name = :name LIMIT 1")
     Long findTagIdByName(String name);
+
+    @Query("UPDATE tags SET name = :unOld WHERE LOWER(name) = LOWER(:old)")
+    void updateTagName(String old, String unOld);
 }
